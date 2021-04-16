@@ -10419,7 +10419,7 @@ Name | Type | Description
 
 Name | Type | Description 
 -----|------|-------------
-**env**?🔹 | <code>[k8s.EnvVar](#opencdk8s-cdk8s-argocd-resources-k8s-envvar)</code> | __*Optional*__
+**env**?🔹 | <code>Array<[k8s.EnvVar](#opencdk8s-cdk8s-argocd-resources-k8s-envvar)></code> | __*Optional*__
 **name**?🔹 | <code>string</code> | __*Optional*__
 
 
