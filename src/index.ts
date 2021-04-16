@@ -18,7 +18,7 @@ export interface ApplicationDirectory {
 
 export interface ApplicationPlugin {
   readonly name?: string;
-  readonly env?: k8s.EnvVar;
+  readonly env?: k8s.EnvVar[];
 }
 
 export interface ApplicationDestination {
