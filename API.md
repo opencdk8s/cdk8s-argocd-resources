@@ -10392,6 +10392,7 @@ __Returns__:
 
 Name | Type | Description 
 -----|------|-------------
+**name**?🔹 | <code>string</code> | __*Optional*__
 **namespace**?🔹 | <code>string</code> | __*Optional*__
 **server**?🔹 | <code>string</code> | __*Optional*__
 
