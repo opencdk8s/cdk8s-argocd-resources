@@ -24,6 +24,7 @@ export interface ApplicationPlugin {
 export interface ApplicationDestination {
   readonly server?: string;
   readonly namespace?: string;
+  readonly name?: string;
 }
 
 export interface SyncPolicyAutomated {
