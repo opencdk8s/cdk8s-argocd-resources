@@ -94,7 +94,7 @@ export class ArgoCdProject extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'argoproj.io/v1alpha1',
     kind: 'AppProject',
-  }
+  };
   /**
      * Renders a Kubernetes manifest for an ingress object. https://github.com/kubernetes-sigs/aws-load-balancer-controller
      *
@@ -124,7 +124,7 @@ export class ArgoCdApplication extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'argoproj.io/v1alpha1',
     kind: 'Application',
-  }
+  };
   /**
      * Renders a Kubernetes manifest for an ingress object. https://github.com/kubernetes-sigs/aws-load-balancer-controller
      *
