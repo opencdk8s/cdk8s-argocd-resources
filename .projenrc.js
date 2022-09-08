@@ -1,34 +1,30 @@
-const { ConstructLibraryCdk8s } = require('projen');
-
-
-const project = new ConstructLibraryCdk8s({
-  author: 'Hunter Thompson',
+const { cdk8s } = require('projen');
+const project = new cdk8s.ConstructLibraryCdk8s({
+  author: 'Hunter-Thompson',
   authorAddress: 'aatman@auroville.org.in',
-  cdk8sVersion: '1.2.1',
-  constructsVersion: '3.3.161',
-  projenVersion: '0.36.5',
+  cdk8sVersion: '2.2.74',
+  constructsVersion: '10.0.5',
   defaultReleaseBranch: 'development',
   stability: 'experimental',
-  jsiiFqn: 'projen.ConstructLibraryCdk8s',
   name: '@opencdk8s/cdk8s-argocd-resources',
-  keywords: ['aws', 'cdk8s', 'cdk'],
-  npmAccess: 'public',
   repositoryUrl: 'https://github.com/opencdk8s/cdk8s-argocd-resources',
+  publishToGo: {
+    gitUserName: 'Hunter-Thompson',
+    gitUserEmail: 'aatman@auroville.org.in',
+    moduleName: 'github.com/opencdk8s/cdk8s-argocd-resources-go',
+  },
   python: {
     distName: 'cdk8s-argocd-resources',
     module: 'cdk8s_argocd_resources',
   },
-  releaseEveryCommit: true,
-  dependabot: false,
-  pullRequestTemplate: false,
-  codeCov: true,
-  clobber: false,
-  readme: true,
+  npmAccess: 'public',
   mergify: true,
+  keywords: ['cdk8s'],
+
+  depsUpgrade: false,
+  // deps: [],                /* Runtime dependencies of this module. */
+  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
+  // devDeps: [],             /* Build dependencies for this module. */
+  // packageName: undefined,  /* The "name" in package.json. */
 });
-
-const common_exclude = ['cdk.out', 'yarn-error.log', 'coverage', '.DS_Store', '.idea', '.vs_code'];
-project.gitignore.exclude(...common_exclude);
-
 project.synth();
-

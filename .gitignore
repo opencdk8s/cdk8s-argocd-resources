@@ -2,8 +2,8 @@
 !/.gitattributes
 !/.projen/tasks.json
 !/.projen/deps.json
+!/.projen/files.json
 !/.github/workflows/pull-request-lint.yml
-!/.github/workflows/stale.yml
 !/package.json
 !/LICENSE
 !/.npmignore
@@ -19,6 +19,7 @@ pids
 *.seed
 *.pid.lock
 lib-cov
+coverage
 *.lcov
 .nyc_output
 build/Release
@@ -38,6 +39,7 @@ junit.xml
 /dist/version.txt
 !/.github/workflows/release.yml
 !/.mergify.yml
+!/.github/pull_request_template.md
 !/test/
 !/tsconfig.dev.json
 !/src/
@@ -47,10 +49,3 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
-cdk.out
-yarn-error.log
-coverage
-.DS_Store
-.idea
-.vs_code
-!/.github/workflows/upgrade-development.yml
