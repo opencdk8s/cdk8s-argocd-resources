@@ -55,7 +55,17 @@ export interface ArgoCdApplicationSpec {
   readonly source?: ApplicationSource;
   readonly destination?: ApplicationDestination;
   readonly syncPolicy?: ApplicationSyncPolicy;
+  readonly ignoreDifferences?: ResourceIgnoreDifferences[];
+}
 
+export interface ResourceIgnoreDifferences {
+  readonly jsonPointers?: string[];
+  readonly jqPathExpressions?: string[];
+  readonly kind?: string;
+  readonly name?: string;
+  readonly namespace?: string;
+  readonly group?: string;
+  readonly server?: string;
 }
 
 export interface ProjectRoles {

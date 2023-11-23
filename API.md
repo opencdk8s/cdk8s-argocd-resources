@@ -194,6 +194,7 @@ Name|Description
 [ArgoCdProjectProps](#opencdk8s-cdk8s-argocd-resources-argocdprojectprops)|*No description*
 [ArgoCdProjectSpec](#opencdk8s-cdk8s-argocd-resources-argocdprojectspec)|*No description*
 [ProjectRoles](#opencdk8s-cdk8s-argocd-resources-projectroles)|*No description*
+[ResourceIgnoreDifferences](#opencdk8s-cdk8s-argocd-resources-resourceignoredifferences)|*No description*
 [ResourceRef](#opencdk8s-cdk8s-argocd-resources-resourceref)|*No description*
 [RetryBackoff](#opencdk8s-cdk8s-argocd-resources-retrybackoff)|*No description*
 [SyncPolicyAutomated](#opencdk8s-cdk8s-argocd-resources-syncpolicyautomated)|*No description*
@@ -10481,6 +10482,7 @@ Name | Type | Description
 Name | Type | Description 
 -----|------|-------------
 **destination**?🔹 | <code>[ApplicationDestination](#opencdk8s-cdk8s-argocd-resources-applicationdestination)</code> | __*Optional*__
+**ignoreDifferences**?🔹 | <code>Array<[ResourceIgnoreDifferences](#opencdk8s-cdk8s-argocd-resources-resourceignoredifferences)></code> | __*Optional*__
 **project**?🔹 | <code>string</code> | __*Optional*__
 **source**?🔹 | <code>[ApplicationSource](#opencdk8s-cdk8s-argocd-resources-applicationsource)</code> | __*Optional*__
 **syncPolicy**?🔹 | <code>[ApplicationSyncPolicy](#opencdk8s-cdk8s-argocd-resources-applicationsyncpolicy)</code> | __*Optional*__
@@ -10533,6 +10535,25 @@ Name | Type | Description
 **groups**?🔹 | <code>Array<string></code> | __*Optional*__
 **name**?🔹 | <code>string</code> | __*Optional*__
 **policies**?🔹 | <code>Array<string></code> | __*Optional*__
+
+
+
+## struct ResourceIgnoreDifferences 🔹 <a id="opencdk8s-cdk8s-argocd-resources-resourceignoredifferences"></a>
+
+
+
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**group**?🔹 | <code>string</code> | __*Optional*__
+**jqPathExpressions**?🔹 | <code>Array<string></code> | __*Optional*__
+**jsonPointers**?🔹 | <code>Array<string></code> | __*Optional*__
+**kind**?🔹 | <code>string</code> | __*Optional*__
+**name**?🔹 | <code>string</code> | __*Optional*__
+**namespace**?🔹 | <code>string</code> | __*Optional*__
+**server**?🔹 | <code>string</code> | __*Optional*__
 
 
 
