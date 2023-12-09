@@ -9,6 +9,7 @@ export interface ApplicationSource {
   readonly path?: string;
   readonly directory?: ApplicationDirectory;
   readonly plugin?: ApplicationPlugin;
+  readonly helm?: HelmOptions;
 
 }
 
@@ -56,6 +57,37 @@ export interface ArgoCdApplicationSpec {
   readonly destination?: ApplicationDestination;
   readonly syncPolicy?: ApplicationSyncPolicy;
   readonly ignoreDifferences?: ResourceIgnoreDifferences[];
+}
+
+export interface HelmOptions {
+  readonly valueFiles?: string[];
+  readonly values?: { [key: string]: string };
+  readonly releaseName?: string;
+  readonly chart?: string;
+  readonly version?: string;
+  readonly repo?: string;
+  readonly targetRevision?: string;
+  readonly helmVersion?: string;
+  readonly helmOptions?: string[];
+  readonly verify?: boolean;
+  readonly wait?: boolean;
+  readonly timeout?: string;
+  readonly force?: boolean;
+  readonly install?: boolean;
+  readonly upgrade?: boolean;
+  readonly lint?: boolean;
+  readonly valuesFrom?: HelmValuesFromSource[];
+}
+
+export interface HelmValuesFromSource {
+  readonly kind?: string;
+  readonly name?: string;
+  readonly namespace?: string;
+  readonly group?: string;
+  readonly version?: string;
+  readonly jsonPointers?: string[];
+  readonly jqPathExpressions?: string[];
+  readonly values?: { [key: string]: string };
 }
 
 export interface ResourceIgnoreDifferences {
