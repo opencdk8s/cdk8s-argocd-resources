@@ -193,6 +193,8 @@ Name|Description
 [ArgoCdApplicationSpec](#opencdk8s-cdk8s-argocd-resources-argocdapplicationspec)|*No description*
 [ArgoCdProjectProps](#opencdk8s-cdk8s-argocd-resources-argocdprojectprops)|*No description*
 [ArgoCdProjectSpec](#opencdk8s-cdk8s-argocd-resources-argocdprojectspec)|*No description*
+[HelmOptions](#opencdk8s-cdk8s-argocd-resources-helmoptions)|*No description*
+[HelmValuesFromSource](#opencdk8s-cdk8s-argocd-resources-helmvaluesfromsource)|*No description*
 [ProjectRoles](#opencdk8s-cdk8s-argocd-resources-projectroles)|*No description*
 [ResourceIgnoreDifferences](#opencdk8s-cdk8s-argocd-resources-resourceignoredifferences)|*No description*
 [ResourceRef](#opencdk8s-cdk8s-argocd-resources-resourceref)|*No description*
@@ -10436,6 +10438,7 @@ Name | Type | Description
 Name | Type | Description 
 -----|------|-------------
 **directory**?🔹 | <code>[ApplicationDirectory](#opencdk8s-cdk8s-argocd-resources-applicationdirectory)</code> | __*Optional*__
+**helm**?🔹 | <code>[HelmOptions](#opencdk8s-cdk8s-argocd-resources-helmoptions)</code> | __*Optional*__
 **path**?🔹 | <code>string</code> | __*Optional*__
 **plugin**?🔹 | <code>[ApplicationPlugin](#opencdk8s-cdk8s-argocd-resources-applicationplugin)</code> | __*Optional*__
 **repoURL**?🔹 | <code>string</code> | __*Optional*__
@@ -10519,6 +10522,55 @@ Name | Type | Description
 **namespaceResourceWhitelist**?🔹 | <code>Array<[ResourceRef](#opencdk8s-cdk8s-argocd-resources-resourceref)></code> | __*Optional*__
 **roles**?🔹 | <code>Array<[ProjectRoles](#opencdk8s-cdk8s-argocd-resources-projectroles)></code> | __*Optional*__
 **sourceRepos**?🔹 | <code>Array<string></code> | __*Optional*__
+
+
+
+## struct HelmOptions 🔹 <a id="opencdk8s-cdk8s-argocd-resources-helmoptions"></a>
+
+
+
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**chart**?🔹 | <code>string</code> | __*Optional*__
+**force**?🔹 | <code>boolean</code> | __*Optional*__
+**helmOptions**?🔹 | <code>Array<string></code> | __*Optional*__
+**helmVersion**?🔹 | <code>string</code> | __*Optional*__
+**install**?🔹 | <code>boolean</code> | __*Optional*__
+**lint**?🔹 | <code>boolean</code> | __*Optional*__
+**releaseName**?🔹 | <code>string</code> | __*Optional*__
+**repo**?🔹 | <code>string</code> | __*Optional*__
+**targetRevision**?🔹 | <code>string</code> | __*Optional*__
+**timeout**?🔹 | <code>string</code> | __*Optional*__
+**upgrade**?🔹 | <code>boolean</code> | __*Optional*__
+**valueFiles**?🔹 | <code>Array<string></code> | __*Optional*__
+**values**?🔹 | <code>Map<string, string></code> | __*Optional*__
+**valuesFrom**?🔹 | <code>Array<[HelmValuesFromSource](#opencdk8s-cdk8s-argocd-resources-helmvaluesfromsource)></code> | __*Optional*__
+**verify**?🔹 | <code>boolean</code> | __*Optional*__
+**version**?🔹 | <code>string</code> | __*Optional*__
+**wait**?🔹 | <code>boolean</code> | __*Optional*__
+
+
+
+## struct HelmValuesFromSource 🔹 <a id="opencdk8s-cdk8s-argocd-resources-helmvaluesfromsource"></a>
+
+
+
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**group**?🔹 | <code>string</code> | __*Optional*__
+**jqPathExpressions**?🔹 | <code>Array<string></code> | __*Optional*__
+**jsonPointers**?🔹 | <code>Array<string></code> | __*Optional*__
+**kind**?🔹 | <code>string</code> | __*Optional*__
+**name**?🔹 | <code>string</code> | __*Optional*__
+**namespace**?🔹 | <code>string</code> | __*Optional*__
+**values**?🔹 | <code>Map<string, string></code> | __*Optional*__
+**version**?🔹 | <code>string</code> | __*Optional*__
 
 
 

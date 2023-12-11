@@ -32,3 +32,39 @@ Array [
   },
 ]
 `;
+
+exports[`app with helm 1`] = `
+Array [
+  Object {
+    "apiVersion": "argoproj.io/v1alpha1",
+    "kind": "Application",
+    "metadata": Object {
+      "name": "test-c87b5978",
+      "namespace": "test",
+    },
+    "spec": Object {
+      "ignoreDifferences": Array [
+        Object {
+          "group": "apps",
+          "jsonPointers": Array [
+            "/spec/replicas",
+          ],
+          "kind": "Deployment",
+        },
+      ],
+      "project": "test",
+      "source": Object {
+        "helm": Object {
+          "valueFiles": Array [
+            "test",
+          ],
+          "version": "v3",
+        },
+        "path": "test",
+        "repoURL": "test",
+        "targetRevision": "test",
+      },
+    },
+  },
+]
+`;
